@@ -1,0 +1,39 @@
+{
+    "_comment": "Config for each environment.",
+    "origin/dev" :{
+        "BRANCH" : "dev",
+        "SNS_BRANCH_NAME" : "DEV",
+        "SNS_ARN" : "arn:aws:sns:us-east-1:513866796971:cicd-api-automation",
+        "DAG_S3_PATH" : "perso-analytics-code-repo-np/airflow-dags-develop",
+        "CODE_S3_PATH" : "perso-analytics-code-repo-np/airflow-etl-code/churn/dev/",
+        "DAG_FILE_NAME" : "churn_etl_dev_hyperflow",
+        "AIRFLOW_SERVER_HOST" : "bt-aws-apps.seed-sdr-np.us-east-1.aws.sysco.net:8443",
+        "DAG_SYNC_MODE" : "develop",
+        "DAG_SYNC_DAG" : "airflow_dags_sync",
+        "DATADOG_CONFIG_PATH" : "perso-analytics-code-repo-np/datadog-config/churn/dev/"
+    },
+    "origin/release" :{
+        "BRANCH" : "release",
+        "SNS_BRANCH_NAME" : "QA",
+        "SNS_ARN" : "arn:aws:sns:us-east-1:513866796971:cicd-api-automation",
+        "DAG_S3_PATH" : "perso-analytics-code-repo-np/airflow-dags-qa",
+        "CODE_S3_PATH" : "perso-analytics-code-repo-np/airflow-etl-code/churn/qa/",
+        "DAG_FILE_NAME" : "churn_etl_qa_hyperflow",
+        "AIRFLOW_SERVER_HOST" : "bt-aws-apps.seed-sdr-np.us-east-1.aws.sysco.net:8444",
+        "DAG_SYNC_MODE" : "qa",
+        "DAG_SYNC_DAG" : "airflow_dags_sync",
+        "DATADOG_CONFIG_PATH" : "perso-analytics-code-repo-np/datadog-config/churn/qa/"
+    },
+    "origin/master" :{
+        "BRANCH" : "prod",
+        "SNS_BRANCH_NAME" : "PROD",
+        "SNS_ARN" : "arn:aws:sns:us-east-1:860032816463:cicd-api-automation-prod",
+        "DAG_S3_PATH" : "perso-analytics-code-repo-np/airflow-dags",
+        "CODE_S3_PATH" : "perso-analytics-code-repo-np/airflow-etl-code/churn/prod/",
+        "DAG_FILE_NAME" : "churn_etl_hyperflow",
+        "AIRFLOW_SERVER_HOST" : "bt-aws-apps.seed-sdr.us-east-1.aws.sysco.net:8443",
+        "DAG_SYNC_MODE" : "prod",
+        "DAG_SYNC_DAG" : "airflow_dags_sync",
+        "DATADOG_CONFIG_PATH" : "perso-analytics-code-repo-np/datadog-config/churn/prod/"
+    }
+}
